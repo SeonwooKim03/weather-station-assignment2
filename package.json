@@ -1,0 +1,11 @@
+{
+  "name": "weather-station-assignment2",
+  "version": "1.0.0",
+  "description": "Weather station sampler assignment",
+  "main": "sampler.js",
+  "scripts": {
+    "start": "node sampler.js",
+    "sensor": "node sensor.js",
+    "test": "node test/sampler.test.js"
+  }
+}
