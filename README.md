@@ -26,5 +26,9 @@ It accepts JSON input and returns a JSON response.
 This design allows the Sensor module to send voltage data to the Sampler in the weather station pipeline.
 
 ## QA Support
-The system supports Availability by detecting sensor data and continuing operation.
-Deployability is supported through CI/CD automation using GitHub Actions.
+
+Two quality attributes considered in this design are Availability and Deployability.
+
+Availability is supported by the use of a simple request–response mechanism in the Sampler API. The Sampler continuously listens for incoming sensor data through the POST /sample endpoint, allowing the system to keep operating and processing sensor inputs.
+
+Deployability is supported through CI/CD automation using GitHub Actions. The pipeline automatically builds the project and runs unit tests whenever changes are pushed to the repository. This appears in the GitHub Actions workflow configuration.
